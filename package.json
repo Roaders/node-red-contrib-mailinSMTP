@@ -1,5 +1,5 @@
 {
-  "name": "node-red-contrib-mailinSMTP",
+  "name": "node-red-contrib-mailin-smtp",
   "version": "1.0.0",
   "description": "SMTP server for Node-Red to respond to received emails without polling",
   "main": "mailinSMTP.js",
