@@ -1,0 +1,52 @@
+
+
+<!-- If you use this as a template, update the copyright with your own name. -->
+
+<!-- First, the content of the edit dialog is defined.                       -->
+
+<script type="text/x-red" data-template-name="Mailin SMTP">
+
+    <div class="form-row">
+        <label for="node-input-port"><i class="fa fa-tag"></i> Port</label>
+        <input type="text" id="node-input-port">
+    </div>
+    <br/>
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <br/>
+</script>
+
+<!-- Next, some simple help text is provided for the node.                   -->
+
+<script type="text/x-red" data-help-name="Mailin SMTP">
+   <p>Sets up an SMTP mail server and outputs received messages as <code>msg.payload</code>.</p>
+   <P>To recieve mail from the outside world port must be 25 and your DNS must be correctly configured for your domain.</P>
+   <P>To test your mail server go to <a href="http://mxtoolbox.com/diagnostic.aspx">MX Toolbox</a>.</p>
+   <P>More docs and mail JSON format can be found <a href="https://github.com/Flolagale/mailin">here</a>.</P>
+</script>
+
+
+<!-- Finally, the node type is registered along with all of its properties   -->
+<!-- The example below shows a small subset of the properties that can be set-->
+<script type="text/javascript">
+    RED.nodes.registerType('Mailin SMTP',{
+        category: 'input',      // the palette category
+        defaults: {             // defines the editable properties of the node
+            name: {value:""},
+			port: {value:25,required:true}
+        },
+		color: "#C0C0C0",
+        inputs:0,               // set the number of inputs - only 0 or 1
+        outputs:1,              // set the number of outputs - 0 to n
+        // set the icon (held in icons dir below where you save the node)
+        icon: "envelope.png",     // saved in  icons/myicon.png
+        label: function() {     // sets the default label contents
+            return this.name||"Mailin SMTP";
+        },
+        labelStyle: function() { // sets the class to apply to the label
+            return this.name?"node_label_italic":"";
+        }
+    });
+</script>

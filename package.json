@@ -1,0 +1,28 @@
+{
+  "name": "node-red-contrib-mailinSMTP",
+  "version": "1.0.0",
+  "description": "SMTP server for Node-Red to respond to received emails without polling",
+  "main": "mailinSMTP.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Roaders/node-red-contrib-mailinSMTP.git"
+  },
+  "keywords": [
+    "node-red",
+    "mailin"
+  ],
+  "author": "Giles Roadnight",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Roaders/node-red-contrib-mailinSMTP/issues"
+  },
+  "homepage": "https://github.com/Roaders/node-red-contrib-mailinSMTP",
+  "node-red": {
+    "nodes": {
+      "mailin SMTP": "mailinSMTP.js"
+    }
+  },
+  "dependencies": {
+    "mailin": "^3.0.3"
+  }
+}
