@@ -4,6 +4,7 @@ module.exports = function(RED) {
     "use strict";
     // require any external libraries we may need....
     var mailin = require('mailin');
+	var os = require('os');
 
     // The main node definition - most things happen in here
     function MailinSMTP(config) {
@@ -12,10 +13,13 @@ module.exports = function(RED) {
 
 		var node = this;
 
-		mailin.start({
+		var conf = {
 		  port: config.port,
-		  disableWebhook: true // Disable the webhook posting.
-		});
+		  disableWebhook: true, // Disable the webhook posting.,
+		  tmp: os.tmpdir() + "/mailin"
+		}
+
+		mailin.start(conf);
 
 		mailin.on('message', function (connection, data, content) {
 
