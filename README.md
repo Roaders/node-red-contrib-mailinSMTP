@@ -7,3 +7,7 @@ This is a simple wrapper for [mailin.io](http://mailin.io/). You can configure a
 A correct MX record should be setup on a domain and pointed at the server where node is running to receive emails.
 
 Emails will be lost and not stored anywhere so I suggest that only copies of emails are forwarded to this server.
+
+## Install
+
+`npm install node-red-contrib-mailin-smtp`
