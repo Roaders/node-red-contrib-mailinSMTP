@@ -1,5 +1,7 @@
 # node-red-contrib-mailinSMTP
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Roaders/node-red-contrib-mailinSMTP.svg)](https://greenkeeper.io/)
+
 [![Known Vulnerabilities](https://snyk.io/test/github/roaders/node-red-contrib-mailinsmtp/badge.svg)](https://snyk.io/test/github/roaders/node-red-contrib-mailinsmtp)
 
 SMTP server for Node-Red to respond to received emails
